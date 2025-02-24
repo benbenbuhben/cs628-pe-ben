@@ -1,50 +1,14 @@
-# React + TypeScript + Vite
+Input
+The Cities Application receives input from users in several ways. Users enter new city details such as name, country, population, and description using a form. Additionally, navigation inputs occur when a user clicks on a city name to view its details. These inputs initiate the update of the application’s state.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Process
+Upon receiving input, the application processes data using React state management and routing. The form submission validates and adds new city data to an existing list. React Router then processes navigation actions by matching URL parameters with city data. This process updates the view dynamically without reloading the page.
 
-Currently, two official plugins are available:
+Output
+The application displays an updated list of cities with detailed information for each selection. The final output is an interactive web interface that reflects user inputs, showing a refreshed cities list, accurate city details, and smooth redirection after data submission. This efficient flow ensures a seamless user experience throughout the application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
